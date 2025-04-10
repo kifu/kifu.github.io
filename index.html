@@ -6,21 +6,26 @@
     <title>Tool Index</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
             margin: 0;
             display: flex;
             height: 100vh;
+            color: #333;
+            background-color: #f5f5f7;
         }
         .sidebar {
-            background-color: #2c3e50;
-            color: white;
+            background-color: #ffffff;
             width: 250px;
             padding: 20px;
             box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
         .sidebar h1 {
             font-size: 24px;
             margin-bottom: 20px;
+            color: #1d1d1f;
         }
         .sidebar ul {
             list-style-type: none;
@@ -31,38 +36,44 @@
         }
         .sidebar a {
             text-decoration: none;
-            color: #ecf0f1;
+            color: #0070c9;
             font-size: 18px;
             transition: color 0.3s;
             cursor: pointer;
         }
         .sidebar a:hover {
-            color: #3498db;
+            color: #0056a3;
         }
         .content {
             flex-grow: 1;
-            padding: 20px;
-            background-color: #ecf0f1;
+            padding: 40px;
+            background-color: #ffffff;
             overflow: auto;
         }
         .content h2 {
             font-size: 28px;
-            color: #34495e;
+            color: #1d1d1f;
         }
         iframe {
             width: 100%;
-            height: 90%;
+            height: 80%;
             border: none;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
     <div class="sidebar">
-        <h1>My Tools</h1>
-        <ul>
-            <li><a onclick="loadTool('base64.html')">Base64 加解密</a></li>
-            <li><a onclick="loadTool('json.html')">json格式化</a></li>
-        </ul>
+        <div>
+            <h1>My Tools</h1>
+            <ul>
+                <li><a onclick="loadTool('base64.html')">Base64 加解密</a></li>
+                <li><a onclick="loadTool('json.html')">JSON 格式化</a></li>
+            </ul>
+        </div>
+        <div>
+            <p>&copy; 2023 My Tools</p>
+        </div>
     </div>
     <div class="content">
         <h2>Welcome to My Tools</h2>
